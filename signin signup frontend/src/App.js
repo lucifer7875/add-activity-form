@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import Dashboard from './components/dashboard'
 import Login from "./components/login/login"
 import Register from "./components/register/register"
+import AddActivity from './components/AddActivity/addactivity';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import userEvent from '@testing-library/user-event';
 
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/addactivity">
+            <AddActivity />
           </Route>
         </Switch>
       </Router>

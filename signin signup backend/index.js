@@ -41,9 +41,9 @@ app.post("/login", (req, res) => {                                   // URL BASE
     })
 })
 
-app.post("/register", (req, res) => {                                // URL BASE POST APP
+app.post("/register", (req, res) => {                                                            // URL BASE POST APP
     const { userName, firstName, lastName, mobileNumber, email, password } = req.body
-    User.findOne({ email: email }, (err, user) => {                  // check email
+    User.findOne({ email: email }, (err, user) => {                                                 // check email
         if (user) {
             res.send({ message: "user already registerd" })
         } else {

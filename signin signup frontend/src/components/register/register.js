@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../login/login.css"
 import "./register.css"
-
 import { useHistory } from "react-router-dom"
 import axios from "axios"
+import Form from 'react-bootstrap/Form'
 
 const Register = () => {
 
@@ -44,76 +44,102 @@ const Register = () => {
         < div className="Register" >
             {console.log("User", user)}
             <h1>Register </h1>
-            <input
-                type="text"
-                name="userName"
-                placeholder="User Name"
-                value={user.userName}
-                onChange={handlechange}
+            <Form class="row g-3">
 
-            />
-            <br></br>
-            <br></br>
-            <input
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                value={user.firstName}
-                onChange={handlechange}
-            />
-            <br></br>
-            <br></br>
-            <input
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                value={user.lastName}
-                onChange={handlechange}
-            />
-            <br></br>
-            <br></br>
-            <input
-                type="number"
-                name="mobileNumber"
-                placeholder="Mobile Number"
-                value={user.mobileNumber}
-                onChange={handlechange}
-            />
-            <br></br>
-            <br></br>
-            <input
-                type="email"
-                name="email"
-                placeholder="Enter Email"
-                value={user.email}
-                onChange={handlechange}
-            />
-            <br></br>
-            <br></br>
-            <input
-                type="password"
-                name="password"
-                placeholder="Enter password"
-                value={user.password}
-                onChange={handlechange}
-            />
-            <br></br>
-            <br></br>
-            <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Enter Confirm Password"
-                value={user.confirmPassword}
-                onChange={handlechange}
-            />
-            <br></br>
-            <br></br>
+                <input
+                    type="text"
+                    name="userName"
+                    placeholder="User Name"
+                    for="validationDefauluserName"
+                    id="validationDefaultuserName"
+                    value={user.userName}
+                    onChange={handlechange}
+                    required
 
-            <button onClick={register}>Register</button><br></br>
-            or
-            <br></br>
-            <button onClick={() => history.push("/login")}>Login</button>
-            <br></br> (User allready register)
+                />
+                <br></br>
+
+                <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    for="validationDefaulfirstName"
+                    id="validationDefaultfirstName"
+                    value={user.firstName}
+                    onChange={handlechange}
+                    required
+                />
+                <br></br>
+
+                <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    for="validationDefaullastName"
+                    id="validationDefaultlastName"
+                    value={user.lastName}
+                    onChange={handlechange}
+                    required
+                />
+                <br></br>
+
+                <input
+                    type="number"
+                    name="mobileNumber"
+                    placeholder="Mobile Number"
+                    for="validationDefaulmobileNumber"
+                    id="validationDefaultmobileNumber"
+                    value={user.mobileNumber}
+                    onChange={handlechange}
+                    required
+                />
+                <br></br>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    for="validationDefaulemail"
+                    id="validationDefaultemail"
+                    value={user.email}
+                    onChange={handlechange}
+                    required
+                />
+                <br></br>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter password"
+                    for="validationDefaulpassword"
+                    id="validationDefaultpassword"
+                    value={user.password}
+                    onChange={handlechange}
+                    required
+                />
+                <br></br>
+
+                <input
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Enter Confirm Password"
+                    for="validationDefaulconfirmPassword"
+                    id="validationDefaultconfirmPassword"
+                    value={user.confirmPassword}
+                    onChange={handlechange}
+                    required
+                />
+                <br></br>
+
+
+                <button onClick={register}>Register</button><br></br>
+                or
+                <br></br>
+                <button onClick={() => history.push("/login")}>Login</button>
+                <br></br> (User allready register)
+
+            </Form>
+
         </div >
     )
 
