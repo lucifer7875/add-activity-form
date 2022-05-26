@@ -22,6 +22,8 @@ const userSchema = new mongoose.Schema({
     name: "string",
     email: "string",
     password: "string",
+    addActivity: [{}],
+
 })
 const User = new mongoose.model("User", userSchema)
 
@@ -65,6 +67,28 @@ app.post("/register", (req, res) => {                                           
         }
     })
 
+})
+
+// Addactivity form Route
+
+app.post("/addactivity", async (req, res) => {
+    const { user_id } = req.body
+
+    console.log(req.body)
+    delete req.body.user_id
+
+    // User.updateOne({ _id: user_id }, { $set: { addActivity: req.body } })
+    //     .then(
+    //         (result, err) => {
+    //             return res.status(200).json({ data: result, message: "details updated" })
+    //         }
+    //     )
+    User.updateOne({ _id: user_id }, { $push: { addActivity: req.body } })
+        .then(
+            (result, err) => {
+                return res.status(200).json({ data: result, message: "pushed in array" })
+            }
+        )
 })
 
 

@@ -44,13 +44,12 @@ const Register = () => {
         < div className="Register" >
             {console.log("User", user)}
             <h1>Register </h1>
-            <Form class="row g-3">
+            <Form className="row g-3">
 
                 <input
                     type="text"
                     name="userName"
                     placeholder="User Name"
-                    for="validationDefauluserName"
                     id="validationDefaultuserName"
                     value={user.userName}
                     onChange={handlechange}
@@ -63,7 +62,6 @@ const Register = () => {
                     type="text"
                     name="firstName"
                     placeholder="First Name"
-                    for="validationDefaulfirstName"
                     id="validationDefaultfirstName"
                     value={user.firstName}
                     onChange={handlechange}
@@ -75,7 +73,7 @@ const Register = () => {
                     type="text"
                     name="lastName"
                     placeholder="Last Name"
-                    for="validationDefaullastName"
+
                     id="validationDefaultlastName"
                     value={user.lastName}
                     onChange={handlechange}
@@ -87,7 +85,6 @@ const Register = () => {
                     type="number"
                     name="mobileNumber"
                     placeholder="Mobile Number"
-                    for="validationDefaulmobileNumber"
                     id="validationDefaultmobileNumber"
                     value={user.mobileNumber}
                     onChange={handlechange}
@@ -99,7 +96,7 @@ const Register = () => {
                     type="email"
                     name="email"
                     placeholder="Enter Email"
-                    for="validationDefaulemail"
+
                     id="validationDefaultemail"
                     value={user.email}
                     onChange={handlechange}
@@ -111,7 +108,7 @@ const Register = () => {
                     type="password"
                     name="password"
                     placeholder="Enter password"
-                    for="validationDefaulpassword"
+
                     id="validationDefaultpassword"
                     value={user.password}
                     onChange={handlechange}
@@ -123,7 +120,7 @@ const Register = () => {
                     type="password"
                     name="confirmPassword"
                     placeholder="Enter Confirm Password"
-                    for="validationDefaulconfirmPassword"
+
                     id="validationDefaultconfirmPassword"
                     value={user.confirmPassword}
                     onChange={handlechange}
