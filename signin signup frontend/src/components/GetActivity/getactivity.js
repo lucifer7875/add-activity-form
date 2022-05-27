@@ -33,23 +33,54 @@ class getActivity extends React.Component {
         if (Array.isArray(allItems)) {
             console.log("items is present")
             console.log(allItems)
-            parsedList = allItems.map((activity) => (
-                <ul>
-                    <li>{activity.addActivity}</li>
-                    <li>{activity.subActivity}</li>
-                    <li>{activity.startDate}</li>
-                    <li>{activity.endDate}</li>
+            parsedList = allItems.map((activity, index) => (
 
+
+                <tr>
+                    <th scope="row">{index + 1}</th>
+                    <td>{activity.addActivity}</td>
+                    <td>{activity.subActivity}</td>
+                    <td>{activity.startDate}</td>
+                    <td>{activity.endDate}</td>
                     {activity.Status == "Pending" ? (
-                        <li className="red">{activity.Status}</li>
+                        <td className="red">{activity.Status}</td>
                     ) : (
-                        <li className="green">{activity.Status}</li>
+                        <td className="green">{activity.Status}</td>
                     )}
-                </ul>
+
+                </tr>
+
+                //    <ul>
+                //         <li>{activity.addActivity}</li>
+                //         <li>{activity.subActivity}</li>
+                //         <li>{activity.startDate}</li>
+                //         <li>{activity.endDate}</li>
+
+                //         {activity.Status == "Pending" ? (
+                //             <li className="red">{activity.Status}</li>
+                //         ) : (
+                //             <li className="green">{activity.Status}</li>
+                //         )}
+                //     </ul>
             ))
         }
 
-        return <div className="navigation">{parsedList}</div>
+        // return <div className="navigation">{parsedList}</div>
+        return <table className="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">addActivity</th>
+                    <th scope="col">subActivity</th>
+                    <th scope="col">startDate</th>
+                    <th scope="col">endDate</th>
+                    <th >Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {parsedList}
+            </tbody>
+        </table>
     }
 }
 
