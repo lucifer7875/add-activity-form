@@ -5,7 +5,7 @@ import Dashboard from './components/dashboard'
 import Login from "./components/login/login"
 import Register from "./components/register/register"
 import AddActivity from './components/AddActivity/addactivity';
-import ShowActivity from './components/Show Activity/showactivity';
+import GetActivity from "./components/GetActivity/getactivity"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
@@ -35,8 +35,8 @@ function App() {
           <Route path="/addactivity">
             <AddActivity />
           </Route>
-          <Route path="/showactivity">
-            <ShowActivity />
+          <Route path="/getactivity">
+            <GetActivity />
           </Route>
         </Switch>
       </Router>

@@ -126,15 +126,15 @@ const Register = () => {
                     onChange={handlechange}
                     required
                 />
-
-                <button className="btn btn-info" onClick={register}>Register</button>
-                <br />
-                or
-                <br />
-                <button className="btn btn-primary" onClick={() => history.push("/login")}>Login</button>
-                <br />
-                (User allready register)
             </Form>
+            <button className="btn btn-info" onClick={register}>Register</button>
+            <br />
+            or
+            <br />
+            <button className="btn btn-primary" onClick={() => history.push("/login")}>Login</button>
+            <br />
+            (User allready register)
+
         </div >
     )
 

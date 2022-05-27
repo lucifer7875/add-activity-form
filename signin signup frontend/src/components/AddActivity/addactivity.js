@@ -109,9 +109,9 @@ const AddActivity = () => {
                             aria-label="Default select example"
                             value={addactivity.Status}
                             onChange={handleChange}>
-                            <option value="1">Add Your Status</option>
-                            <option value="1">Done</option>
-                            <option value="2">Pending</option>
+                            <option >Add Your Status</option>
+                            <option value="Done">Done</option>
+                            <option value="Pending">Pending</option>
                         </select>
                     </td>
                 </tr>

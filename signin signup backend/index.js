@@ -84,7 +84,17 @@ app.post("/addactivity", async (req, res) => {
             }
         )
 })
+//get activity
+app.get("/getactivity/:id", async (req, res) => {
+    // console.log("showing data")
+    console.log(req.params.id)
+    console.log("got a request")
 
+    const data = await User.findById(req.params.id)
+    console.log(data)
+    res.send(data)
+    console.log("server request ends here")
+})
 
 app.listen(9002, () => {
     console.log("BE started at port 9002")
