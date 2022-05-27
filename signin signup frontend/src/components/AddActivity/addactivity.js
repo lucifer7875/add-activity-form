@@ -33,7 +33,7 @@ const AddActivity = () => {
             .post("http://localhost:9002/addactivity", addactivity)
             .then((res) => {
                 alert(res.data.message)
-                history.push("/showactivity")
+                history.push("/getactivity")
             })
     }
 
@@ -109,7 +109,7 @@ const AddActivity = () => {
                             aria-label="Default select example"
                             value={addactivity.Status}
                             onChange={handleChange}>
-                            <option >Add Your Status</option>
+                            <option  >Add Your Status</option>
                             <option value="Done">Done</option>
                             <option value="Pending">Pending</option>
                         </select>
