@@ -17,7 +17,7 @@ const Dashboard = ({ setLoginUser }) => {
 
                     <button class="btn btn-info" onClick={() => history.push("/addactivity")}>Add Activity</button>
 
-                    <button class="btn btn-info" onClick={() => history.push("/showactivity")}>Show Activity</button>
+                    <button class="btn btn-info" onClick={() => history.push("/getactivity")}>Get Activity</button>
 
                 </Container>
             </Navbar>
