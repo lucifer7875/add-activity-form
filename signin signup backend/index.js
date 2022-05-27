@@ -77,16 +77,10 @@ app.post("/addactivity", async (req, res) => {
     console.log(req.body)
     delete req.body.user_id
 
-    // User.updateOne({ _id: user_id }, { $set: { addActivity: req.body } })
-    //     .then(
-    //         (result, err) => {
-    //             return res.status(200).json({ data: result, message: "details updated" })
-    //         }
-    //     )
     User.updateOne({ _id: user_id }, { $push: { addActivity: req.body } })
         .then(
             (result, err) => {
-                return res.status(200).json({ data: result, message: "pushed in array" })
+                return res.status(200).json({ data: result, message: "Data added Successfully" })
             }
         )
 })

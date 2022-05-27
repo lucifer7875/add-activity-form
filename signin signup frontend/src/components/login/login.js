@@ -20,20 +20,21 @@ const Login = ({ setLoginUser }) => {
             [name]: value
         })
     }
+
     const Login = () => {
         axios.post("http://localhost:9002/login", user)
             .then(res => {
                 alert(res.data.message)
                 localStorage.setItem("user_values", JSON.stringify(res.data.user))
                 setLoginUser(res.data.user)
-                history.push("/dashboard")
+                history.push("/")
             })
 
     }
 
     return (
         <div className="Login">
-            {/* {console.log("User", user)} */}
+            {console.log("User", user)}
             <h1>Login</h1>
 
             <input
@@ -52,14 +53,10 @@ const Login = ({ setLoginUser }) => {
             />
             <br></br>  <br></br>
             <button onClick={Login} >Login</button>
-
             <br></br>
-
             or
-
             <br></br>
             <button onClick={() => history.push("/register")}>Register</button><br></br>(New User First Register)
-
 
         </div>
     )

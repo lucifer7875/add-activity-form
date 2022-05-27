@@ -32,7 +32,7 @@ const AddActivity = () => {
         axios
             .post("http://localhost:9002/addactivity", addactivity)
             .then((res) => {
-
+                alert(res.data.message)
                 history.push("/showactivity")
             })
     }
@@ -120,7 +120,7 @@ const AddActivity = () => {
                     <button className="btn btn-info" onClick={addActivity}>Submit</button>
                 </td>
                 <td>
-                    <button className="btn btn-info" onClick={() => history.push("/dashboard")}>Back</button>
+                    <button className="btn btn-info" onClick={() => history.push("/")}>Back</button>
                 </td>
             </table>
 

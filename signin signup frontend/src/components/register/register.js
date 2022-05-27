@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom"
 import axios from "axios"
 import Form from 'react-bootstrap/Form'
 
+
 const Register = () => {
 
     const history = useHistory()
@@ -44,8 +45,8 @@ const Register = () => {
         < div className="Register" >
             {console.log("User", user)}
             <h1>Register </h1>
-            <Form className="row g-3">
 
+            <Form>
                 <input
                     type="text"
                     name="userName"
@@ -120,23 +121,20 @@ const Register = () => {
                     type="password"
                     name="confirmPassword"
                     placeholder="Enter Confirm Password"
-
                     id="validationDefaultconfirmPassword"
                     value={user.confirmPassword}
                     onChange={handlechange}
                     required
                 />
-                <br></br>
 
-
-                <button onClick={register}>Register</button><br></br>
+                <button className="btn btn-info" onClick={register}>Register</button>
+                <br />
                 or
-                <br></br>
-                <button onClick={() => history.push("/login")}>Login</button>
-                <br></br> (User allready register)
-
+                <br />
+                <button className="btn btn-primary" onClick={() => history.push("/login")}>Login</button>
+                <br />
+                (User allready register)
             </Form>
-
         </div >
     )
 
